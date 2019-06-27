@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="index-body">
+  <swiper class="swiper" autoplay="true" interval="5000" duration="1000" indicator-color="#e8e8e8" indicator-active-color="#a9dd3c">
+    <block wx:for="{{carousel}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='search'>
+            <input type='text' placeholder='搜索课程，教师名' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+            <icon class="icon" type="search" size="14"></icon>
+            
+        </view>
+
+  <view class="index-nav">
+    <block wx:for="{{navs}}">
+      <view class="nav-item">
+        <image src="{{item.icon}}" class="nav-icon" mode="widthFix"/>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="index-section">
+    <view class="section-title">新品专区</view>
+    <view class="section-content">
+      <navigator url="" class="section-item" wx:for="{{newGoods}}">
+        <image src="{{item.thumbnail}}" class="section-img" mode="widthFix"/>
+        <text class="section-name">{{item.goods_name}}</text>
+        <button bindtap='delete' class="deletebutton">删除</button>
+        <text class="section-price">{{item.goods_price}}</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="index-section">
+    <view class="section-title">热销专区</view>
+    <view class="section-content">
+      <navigator url="/pages/goods/goods?id={{item.goods_id}}" class="section-item" wx:for="{{hotGoods}}">
+        <image src="{{item.thumbnail}}" class="section-img" mode="widthFix"/>
+        <text class="section-name">{{item.goods_name}}</text>
+        <text class="section-price">{{item.goods_price}}</text>
+      </navigator>
+    </view>
+  </view>  
+</view>

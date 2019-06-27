@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="index-body">
+  <swiper class="swiper" autoplay="true" interval="5000" duration="1000" indicator-color="#e8e8e8" indicator-active-color="#a9dd3c">
+    <block wx:for="{{carousel}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='search' bindtap='sear'>
+            <input  type='text' id='ssk' placeholder='搜索课程，教师名' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+            <icon class="icon" type="search" size="14"></icon>
+            
+        </view>
+
+  <view class="index-nav">
+    <block wx:for="{{navs}}">
+      <view class="nav-item">
+        <image src="{{item.icon}}" class="nav-icon" mode="widthFix"/>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="index-section">
+    <view class="section-title">所有课程</view>
+    <view class="section-content">
+      <navigator url="" bindtap='delete' class="section-item" wx:for="{{list}}">
+        <image src="{{item.img}}" class="section-img" mode="widthFix"/>
+        <text class="section-name">{{item.course}}</text>
+        <button  class="deletebutton">删除</button>
+        <text class="section-price">{{item.teacher}}</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

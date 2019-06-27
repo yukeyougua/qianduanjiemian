@@ -1,0 +1,76 @@
+/* pages/new/new.wxss */
+page{
+  background-color: #f8f7f7;
+}
+.new-banner-img{
+    width: 100%;
+}
+/* 搜索框样式 */
+.search
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width:60%;
+  height:60rpx;
+  background-color:whitesmoke;
+  
+  border:1rpx solid whitesmoke;
+  border-radius: 20px;
+  position: absolute;
+  top:10%;
+  left: 20%; 
+  
+  
+}
+
+/* 搜索框提示文字样式 */
+.search input
+{
+  font-size:27rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+}
+
+/* 搜索框小图标 */
+.search image
+{ 
+  width:40rpx;
+  height:40rpx;
+  padding-right:20rpx;
+}
+
+.goods-content{
+  line-height: 1.5;
+  background-color: #fff;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.goods-item{
+  display: flex;
+  padding: 20rpx;
+}
+.goods-item:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+.goods-img{
+  flex: 1;
+}
+.goods-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3;
+    padding-left: 30rpx;
+    padding-bottom: 10rpx;
+}
+.goods-name{
+  display: block;
+}
+.goods-price{
+  display: block;
+  color: #ff6600;
+  font-weight: 700;
+  text-align: left;
+}

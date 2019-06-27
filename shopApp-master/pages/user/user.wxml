@@ -1,0 +1,36 @@
+<!--pages/user/user.wxml-->
+<view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text>{{nickname}}</text>
+</view>
+<view class="userinfo-list">
+    <view class="userinfo-item">
+        <text class="title">修改个人信息</text>
+        <text>></text>
+    </view>
+    <view class="userinfo-item">
+        <text class="title">修改密码</text>
+        <text>></text>
+    </view>
+        <view class="userinfo-item">
+        <text class="title">绑定手机</text>
+        <text>></text>
+    </view>
+        <view class="userinfo-item">
+        <text class="title">绑定邮箱</text>
+        <text>></text>
+    </view>
+     <view class="userinfo-item">
+        <text class="title">历史记录</text>
+        <text>></text>
+    </view>
+     <view class="userinfo-item">
+        <text class="title">收藏列表</text>
+        <text>></text>
+    </view>
+      <navigator url='/pages/file/file'><view class="userinfo-item">
+       <text class="title">上传文件</text>
+        <text>></text>
+    </view>
+    </navigator>
+</view>
